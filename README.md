@@ -7,6 +7,7 @@ git clone https://github.com/totumonline/totum-mit.git
 
 And create .dockerignore:
 
+```
 totum-mit/.git
 totum-mit/.gitignore
 totum-mit/.gitattributes
@@ -14,6 +15,7 @@ totum-mit/composer.phar
 totum-mit/Conf.php.default
 totum-mit/http/fls/
 totum-mit/http/.htaccess
+```
 
 After that you can make build.
 
