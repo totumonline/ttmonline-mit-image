@@ -31,7 +31,7 @@ COPY ./certbot/acme /etc/nginx/acme
 
 # Create work-file and change owner for file and Totum catalog
 
-RUN touch /var/www/totum-work && chown -R totum:totum /var/www/totum-mit && chown totum:totum /var/www/totum-work && mkdir -p /var/www/html/.well-known/acme-challenge && rm /etc/nginx/sites-available/default && rm /etc/nginx/sites-enabled/default && touch /etc/nginx/sites-available/totum.online.conf && ln -s /etc/nginx/sites-available/totum.online.conf /etc/nginx/sites-enabled/totum.online.conf
+RUN touch /var/www/totum-work && chown -R totum:totum /var/www/totum-mit && chown totum:totum /var/www/totum-work && mkdir -p /var/www/html/.well-known/acme-challenge && rm /etc/nginx/sites-available/default && rm /etc/nginx/sites-enabled/default && touch /etc/nginx/sites-available/totum.online.conf && ln -s /etc/nginx/sites-available/totum.online.conf /etc/nginx/sites-enabled/totum.online.conf && rm /etc/php/8.0/fpm/pool.d/www.conf && mkdir /var/lib/php/sessions_totum && chmod 1733 /var/lib/php/sessions_totum
 
 # START SECTION
 
